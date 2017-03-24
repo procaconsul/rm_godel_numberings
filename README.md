@@ -2,11 +2,12 @@
 # [Register Machines] Godel's Numberings program decoder
 
 Register Machines came in  the mid '50s as an alternative model of computation to Turing Machines.
-They operate on natural numbers, stored in (finitely many) register R0 ... Rn.
+They operate on natural numbers, stored in (finitely many) registers R0 ... Rn.
 A program takes the form of a finite list of instructions `<label>: <body>` where each body can be one of the following:
 1. Rn+ => Li: add 1 to the content of Rn and jump to instruction Li;
 2. Rn- => Li, Lj: if the content of Rn is > 0, subtract 1 and jump to Li, else jump to Lj (branch instruction);
-3. HALT: stop the execution. 
+3. HALT: stop the execution.
+ 
 Via Godel's numberings, it is possible to encode each instruction in a number and the so-obtained list of numbers
 in a single one, representing the given program.
 
